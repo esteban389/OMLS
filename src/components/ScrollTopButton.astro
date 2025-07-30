@@ -1,0 +1,171 @@
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="m18 15-6-6-6 6"></path>
+    </svg>
+</button>
+
+<script>
+    // Scroll to top button functionality
+    function ScrollToTopButton() {
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        if (scrollToTopBtn) {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add("visible");
+                } else {
+                    scrollToTopBtn.classList.remove("visible");
+                }
+            });
+
+            scrollToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        ScrollToTopButton();
+    });
+</script>
+
+<style>
+    /* Scroll to Top Button */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: var(--color-gradient-gold);
+        color: var(--color-text-primary);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1rem);
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        &:hover {
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        &:active {
+            transform: translateY(-1px) scale(1.05);
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+            transform: translateY(-0.25rem);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+
+            svg {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+
+        /* Animation for initial appearance */
+        &.visible {
+            animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.3) translateY(20px);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.05) translateY(0);
+        }
+
+        70% {
+            transform: scale(0.9) translateY(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    /* Optional: Add a subtle pulse animation when visible */
+    .scroll-to-top.visible::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 215, 0, 0.3),
+            rgba(249, 115, 22, 0.3)
+        );
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.7;
+        }
+
+        50% {
+            transform: scale(1.1);
+            opacity: 0.3;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0.7;
+        }
+    }
+</style>
