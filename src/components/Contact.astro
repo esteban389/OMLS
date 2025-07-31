@@ -1,5 +1,5 @@
 ---
-import { _, type TranslationLanguage } from '../translations/translation';
+import { _, type TranslationLanguage } from "../translations/translation";
 
 interface Props {
     language: TranslationLanguage;
@@ -11,32 +11,42 @@ const { language } = Astro.props;
 <section id="contact" class="section-contact">
     <div class="container">
         <div class="header">
-            <div class="badge">{_(language, 'contact.header.badge')}</div>
-            <h2 class="title">{_(language, 'contact.header.title')}</h2>
-            <p class="subtitle">{_(language, 'contact.header.subtitle')}</p>
+            <div class="badge">{_(language, "contact.header.badge")}</div>
+            <h2 class="title">{_(language, "contact.header.title")}</h2>
+            <p class="subtitle">{_(language, "contact.header.subtitle")}</p>
         </div>
         <div class="contact-grid">
             <div class="contact-info">
-                <h3>{_(language, 'contact.info.title')}</h3>
+                <h3>{_(language, "contact.info.title")}</h3>
                 <div class="info-items">
                     <div class="info-item">
                         <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
                                 <path
-                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                >
                                 </path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                         </div>
                         <div class="info-content">
-                            <h4>{_(language, 'contact.info.email.label')}</h4>
+                            <h4>{_(language, "contact.info.email.label")}</h4>
                             <p id="email"></p>
                             <script>
                                 const u = "hello";
                                 const d = "olympicmoris.com";
-                                const emailElement = document.getElementById('email');
+                                const emailElement =
+                                    document.getElementById("email");
                                 if (emailElement) {
                                     emailElement.innerHTML = `<a href="mailto:${u}@${d}">${u}@${d}</a>`;
                                 }
@@ -45,44 +55,87 @@ const { language } = Astro.props;
                     </div>
                     <div class="info-item">
                         <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
                                 <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                >
                                 </path>
                             </svg>
                         </div>
                         <div class="info-content">
-                            <h4>{_(language, 'contact.info.phone.label')}</h4>
+                            <h4>{_(language, "contact.info.phone.label")}</h4>
                             <p>+1 (702) 555-0123</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                ></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
                         </div>
                         <div class="info-content">
-                            <h4>{_(language, 'contact.info.location.label')}</h4>
-                            <p>{_(language, 'contact.info.location.value')}</p>
+                            <h4>
+                                {_(language, "contact.info.location.label")}
+                            </h4>
+                            <p>{_(language, "contact.info.location.value")}</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="info-content business-hours-info">
-                            <h4>{_(language, 'contact.info.hours.label')}</h4>
+                            <h4>{_(language, "contact.info.hours.label")}</h4>
                             <div class="business-hours-container">
                                 <div class="hours-item">
-                                    <span class="day">{_(language, 'contact.hours.weekdays')}</span>
-                                    <span class="time">{_(language, 'contact.hours.weekdays_time')}</span>
+                                    <span class="day"
+                                        >{
+                                            _(
+                                                language,
+                                                "contact.hours.weekdays",
+                                            )
+                                        }</span
+                                    >
+                                    <span class="time"
+                                        >{
+                                            _(
+                                                language,
+                                                "contact.hours.weekdays_time",
+                                            )
+                                        }</span
+                                    >
                                 </div>
                                 <div class="hours-item closed">
-                                    <span class="day">{_(language, 'contact.hours.sunday')}</span>
-                                    <span class="time">{_(language, 'contact.hours.closed')}</span>
+                                    <span class="day"
+                                        >{
+                                            _(language, "contact.hours.sunday")
+                                        }</span
+                                    >
+                                    <span class="time"
+                                        >{
+                                            _(language, "contact.hours.closed")
+                                        }</span
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -90,44 +143,438 @@ const { language } = Astro.props;
                 </div>
             </div>
             <div class="contact-form">
-                <h3>{_(language, 'contact.form.title')}</h3>
+                <h3>{_(language, "contact.form.title")}</h3>
                 <form>
                     <div class="form-group">
-                        <label for="fullname">{_(language, 'contact.form.fields.fullname.label')}</label>
-                        <input type="text" id="fullname" name="fullname" required>
+                        <label for="fullname"
+                            >{
+                                _(
+                                    language,
+                                    "contact.form.fields.fullname.label",
+                                )
+                            }</label
+                        >
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            required
+                        />
                     </div>
                     <div class="form-group">
-                        <label for="email">{_(language, 'contact.form.fields.email.label')}</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email"
+                            >{
+                                _(language, "contact.form.fields.email.label")
+                            }</label
+                        >
+                        <input type="email" id="email" name="email" required />
                     </div>
                     <div class="form-group">
-                        <label for="phone">{_(language, 'contact.form.fields.phone.label')}</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="phone"
+                            >{
+                                _(language, "contact.form.fields.phone.label")
+                            }</label
+                        >
+                        <input type="tel" id="phone" name="phone" />
                     </div>
                     <div class="form-group">
-                        <label for="service">{_(language, 'contact.form.fields.service.label')}</label>
+                        <label for="service"
+                            >{
+                                _(language, "contact.form.fields.service.label")
+                            }</label
+                        >
                         <select id="service" name="service">
-                            <option value="">{_(language, 'contact.form.fields.service.options.default')}</option>
-                            <option value="tax">{_(language, 'contact.form.fields.service.options.tax')}</option>
-                            <option value="notary">{_(language, 'contact.form.fields.service.options.notary')}</option>
-                            <option value="accounting">{_(language, 'contact.form.fields.service.options.accounting')}</option>
-                            <option value="other">{_(language, 'contact.form.fields.service.options.other')}</option>
+                            <option value=""
+                                >{
+                                    _(
+                                        language,
+                                        "contact.form.fields.service.options.default",
+                                    )
+                                }</option
+                            >
+                            <option value="tax"
+                                >{
+                                    _(
+                                        language,
+                                        "contact.form.fields.service.options.tax",
+                                    )
+                                }</option
+                            >
+                            <option value="notary"
+                                >{
+                                    _(
+                                        language,
+                                        "contact.form.fields.service.options.notary",
+                                    )
+                                }</option
+                            >
+                            <option value="accounting"
+                                >{
+                                    _(
+                                        language,
+                                        "contact.form.fields.service.options.accounting",
+                                    )
+                                }</option
+                            >
+                            <option value="other"
+                                >{
+                                    _(
+                                        language,
+                                        "contact.form.fields.service.options.other",
+                                    )
+                                }</option
+                            >
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">{_(language, 'contact.form.fields.message.label')}</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message"
+                            >{
+                                _(language, "contact.form.fields.message.label")
+                            }</label
+                        >
+                        <textarea id="message" name="message" rows="5" required
+                        ></textarea>
                     </div>
                     <button type="submit" class="btn-primary">
-                        {_(language, 'contact.form.submit')}
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M5 12h14" />
-                            <path d="m12 5 7 7-7 7" />
+                        {_(language, "contact.form.submit")}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </button>
                 </form>
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<style>
+    /* Contact Section */
+    .section-contact {
+        position: relative;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+
+            @media (min-width: 1024px) {
+                padding: 0 2rem;
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 5rem;
+
+                .badge {
+                    background: var(--color-gradient-gold);
+                    color: var(--color-text-primary);
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 9999px;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    display: inline-block;
+                    box-shadow: 0 10px 25px var(--color-shadow-light);
+                    border: 1px solid var(--color-border-primary);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 15px 35px var(--color-shadow-medium);
+                    }
+                }
+
+                .title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: var(--color-text-primary);
+                    margin-block: 2rem;
+                    cursor: default;
+
+                    @media (min-width: 768px) {
+                        font-size: 3.75rem;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 1.25rem;
+                    color: var(--color-text-secondary);
+                    max-width: 64rem;
+                    margin: 0 auto;
+                    line-height: 1.75;
+                }
+            }
+
+            .contact-grid {
+                display: grid;
+                gap: 4rem;
+
+                @media (min-width: 1024px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .contact-info {
+                    background: var(--color-background-secondary);
+                    backdrop-filter: blur(16px);
+                    border-radius: 1.5rem;
+                    padding: 2.5rem;
+                    border: 1px solid var(--color-border-primary);
+                    box-shadow: 0 20px 50px var(--color-shadow-light);
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-0.5rem);
+                        box-shadow: 0 30px 60px var(--color-shadow-medium);
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: var(--color-text-primary);
+                        margin-bottom: 2rem;
+                        text-align: center;
+                    }
+
+                    .info-items {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+
+                        .info-item {
+                            display: flex;
+                            align-items: center;
+                            gap: 1.5rem;
+                            transition: transform 0.3s ease;
+
+                            &:hover {
+                                transform: translateX(0.5rem);
+                            }
+
+                            .icon-box {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                                border-radius: 1rem;
+                                background: var(--color-gradient-gold);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                box-shadow: 0 10px 30px
+                                    var(--color-shadow-light);
+                                transition: all 0.3s ease;
+
+                                svg {
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    color: white;
+                                }
+
+                                .info-item:hover & {
+                                    transform: scale(1.1) rotate(12deg);
+                                }
+                            }
+
+                            .business-hours-info {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                            }
+
+                            .info-content {
+                                h4 {
+                                    font-size: 1.125rem;
+                                    font-weight: 600;
+                                    color: var(--color-text-primary);
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                p {
+                                    color: var(--color-text-secondary);
+                                    line-height: 1.6;
+                                }
+
+                                .business-hours-container {
+                                    background: linear-gradient(
+                                        135deg,
+                                        var(--color-overlay-light),
+                                        var(--color-overlay-medium)
+                                    );
+                                    border-radius: 1rem;
+                                    padding: 1.5rem;
+                                    border: 1px solid
+                                        var(--color-border-primary);
+                                    box-shadow: 0 10px 30px
+                                        var(--color-shadow-light);
+                                    transition: all 0.3s ease;
+
+                                    &:hover {
+                                        transform: translateY(-0.25rem);
+                                        box-shadow: 0 15px 40px
+                                            var(--color-shadow-medium);
+                                        border-color: var(
+                                            --color-border-secondary
+                                        );
+                                    }
+
+                                    .hours-item {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding: 0.75rem 0;
+                                        border-bottom: 1px solid
+                                            var(--color-border-tertiary);
+                                        transition: all 0.3s ease;
+
+                                        &:last-child {
+                                            border-bottom: none;
+                                        }
+
+                                        &:hover {
+                                            transform: translateX(0.5rem);
+                                            background: var(
+                                                --color-overlay-light
+                                            );
+                                            border-radius: 0.5rem;
+                                            padding-left: 0.75rem;
+                                            padding-right: 0.75rem;
+                                        }
+
+                                        .day {
+                                            font-weight: 600;
+                                            color: var(--color-text-primary);
+                                            font-size: 0.95rem;
+                                        }
+
+                                        .time {
+                                            color: var(--color-text-secondary);
+                                            font-weight: 500;
+                                            font-size: 0.9rem;
+                                        }
+
+                                        &.closed {
+                                            opacity: 0.6;
+
+                                            .time {
+                                                color: var(--color-error);
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .contact-form {
+                    background: var(--color-background-secondary);
+                    backdrop-filter: blur(16px);
+                    border-radius: 1.5rem;
+                    padding: 2.5rem;
+                    border: 1px solid var(--color-border-primary);
+                    box-shadow: 0 20px 50px var(--color-shadow-light);
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-0.5rem);
+                        box-shadow: 0 30px 60px var(--color-shadow-medium);
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: var(--color-text-primary);
+                        margin-bottom: 2rem;
+                        text-align: center;
+                    }
+
+                    .form-group {
+                        margin-bottom: 1.5rem;
+
+                        label {
+                            display: block;
+                            font-weight: 500;
+                            color: var(--color-text-primary);
+                            margin-bottom: 0.5rem;
+                            transition: color 0.3s ease;
+                        }
+
+                        input,
+                        select,
+                        textarea {
+                            width: 100%;
+                            padding: 1rem;
+                            border: 2px solid var(--color-border-primary);
+                            border-radius: 0.75rem;
+                            background: var(--color-background-tertiary);
+                            backdrop-filter: blur(10px);
+                            font-size: 1rem;
+                            color: var(--color-text-primary);
+                            transition: all 0.3s ease;
+                            box-sizing: border-box;
+
+                            &:focus {
+                                outline: none;
+                                border-color: var(--color-primary);
+                                box-shadow: 0 0 0 3px var(--color-overlay-light);
+                                transform: translateY(-2px);
+                            }
+
+                            &::placeholder {
+                                color: var(--color-text-muted);
+                            }
+                        }
+
+                        textarea {
+                            resize: vertical;
+                            min-height: 120px;
+                        }
+                    }
+
+                    .btn-primary {
+                        width: 100%;
+                        padding: 1.25rem 2.5rem;
+                        font-weight: 700;
+                        border-radius: 9999px;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        background: var(--color-gradient-primary);
+                        color: var(--color-text-primary);
+                        box-shadow: 0 10px 15px var(--color-shadow-light);
+                        border: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: translateY(-0.5rem);
+                            box-shadow: 0 20px 25px var(--color-shadow-medium);
+
+                            svg {
+                                transform: translateX(0.25rem);
+                            }
+                        }
+
+                        svg {
+                            margin-left: 0.5rem;
+                            height: 1.25rem;
+                            width: 1.25rem;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
