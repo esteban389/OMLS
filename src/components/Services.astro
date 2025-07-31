@@ -1,5 +1,5 @@
 ---
-import { _, type TranslationLanguage } from '../translations/translation';
+import { _, type TranslationLanguage } from "../translations/translation";
 
 interface Props {
     language: TranslationLanguage;
@@ -11,57 +11,107 @@ const { language } = Astro.props;
 <section id="services" class="section-services">
     <div class="container">
         <div class="header">
-            <div class="badge">{_(language, 'services.header.badge')}</div>
-            <h2 class="title">{_(language, 'services.header.title')}</h2>
+            <div class="badge">{_(language, "services.header.badge")}</div>
+            <h2 class="title">{_(language, "services.header.title")}</h2>
             <p class="subtitle">
-                {_(language, 'services.header.subtitle')}
+                {_(language, "services.header.subtitle")}
             </p>
         </div>
         <div class="services-flex-row">
             <div class="services-img-badge">
-                <img src="/assets/images/services.png" alt="Three people smiling" class="services-hero-img">
+                <img
+                    src="/images/services.png"
+                    alt="Three people smiling"
+                    class="services-hero-img"
+                />
                 <div class="badge-card feature-card card-1">
                     <div class="icon-wrap gold-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon"
+                        >
                             <circle cx="12" cy="8" r="6"></circle>
-                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"
+                            ></path>
                         </svg>
                     </div>
-                    <div class="feature-title">{_(language, 'about.features.excellence.title')}</div>
-                    <div class="feature-subtitle">{_(language, 'about.features.excellence.subtitle')}</div>
+                    <div class="feature-title">
+                        {_(language, "about.features.excellence.title")}
+                    </div>
+                    <div class="feature-subtitle">
+                        {_(language, "about.features.excellence.subtitle")}
+                    </div>
                 </div>
             </div>
             <div class="meet-helpers">
                 <h3>Meet your helpers</h3>
-                <p>Our certified professionals are here to make your legal journey smooth and enjoyable. We believe in personal service with a smile! 😊</p>
+                <p>
+                    Our certified professionals are here to make your legal
+                    journey smooth and enjoyable. We believe in personal service
+                    with a smile! 😊
+                </p>
                 <div class="features-grid">
                     <div class="feature-card card-2">
                         <div class="icon-wrap amber-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="icon">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
+                                <path
+                                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                                ></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                             </svg>
                         </div>
-                        <div class="feature-title">{_(language, 'about.features.services.title')}</div>
-                        <div class="feature-subtitle">{_(language, 'about.features.services.subtitle')}</div>
+                        <div class="feature-title">
+                            {_(language, "about.features.services.title")}
+                        </div>
+                        <div class="feature-subtitle">
+                            {_(language, "about.features.services.subtitle")}
+                        </div>
                     </div>
                     <div class="feature-card card-3">
                         <div class="icon-wrap orange-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon"
+                            >
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                         </div>
-                        <div class="feature-title">{_(language, 'about.features.bilingual.title')}</div>
-                        <div class="feature-subtitle">{_(language, 'about.features.bilingual.subtitle')}</div>
+                        <div class="feature-title">
+                            {_(language, "about.features.bilingual.title")}
+                        </div>
+                        <div class="feature-subtitle">
+                            {_(language, "about.features.bilingual.subtitle")}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,9 +121,18 @@ const { language } = Astro.props;
                 <div class="hover-bg"></div>
                 <div class="icon-box">
                     <!-- Tax Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="icon">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon"
+                    >
                         <rect width="16" height="20" x="4" y="2" rx="2"></rect>
                         <line x1="8" x2="16" y1="6" y2="6"></line>
                         <line x1="16" x2="16" y1="14" y2="18"></line>
@@ -86,26 +145,35 @@ const { language } = Astro.props;
                         <path d="M8 18h.01"></path>
                     </svg>
                 </div>
-                <h3>{_(language, 'services.tax.title')}</h3>
-                <p>{_(language, 'services.tax.description')}</p>
+                <h3>{_(language, "services.tax.title")}</h3>
+                <p>{_(language, "services.tax.description")}</p>
                 <ul>
                     <li>
-                        <div></div>{_(language, 'services.tax.features.personal')}
+                        <div></div>{
+                            _(language, "services.tax.features.personal")
+                        }
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.tax.features.itin')}
+                        <div></div>{_(language, "services.tax.features.itin")}
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.tax.features.payment')}
+                        <div></div>{
+                            _(language, "services.tax.features.payment")
+                        }
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.tax.features.audit')}
+                        <div></div>{_(language, "services.tax.features.audit")}
                     </li>
                 </ul>
                 <a href="#contact">
-                    {_(language, 'services.tax.cta')}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor">
+                    {_(language, "services.tax.cta")}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                    >
                         <path d="M5 12h14"></path>
                         <path d="m12 5 7 7-7 7"></path>
                     </svg>
@@ -116,34 +184,58 @@ const { language } = Astro.props;
                 <div class="hover-bg"></div>
                 <div class="icon-box">
                     <!-- File Check Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="icon">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon"
+                    >
+                        <path
+                            d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                        ></path>
                         <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
                         <path d="m9 15 2 2 4-4"></path>
                     </svg>
                 </div>
-                <h3>{_(language, 'services.notary.title')}</h3>
-                <p>{_(language, 'services.notary.description')}</p>
+                <h3>{_(language, "services.notary.title")}</h3>
+                <p>{_(language, "services.notary.description")}</p>
                 <ul>
                     <li>
-                        <div></div>{_(language, 'services.notary.features.contracts')}
+                        <div></div>{
+                            _(language, "services.notary.features.contracts")
+                        }
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.notary.features.mobile')}
+                        <div></div>{
+                            _(language, "services.notary.features.mobile")
+                        }
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.notary.features.closings')}
+                        <div></div>{
+                            _(language, "services.notary.features.closings")
+                        }
                     </li>
                     <li>
-                        <div></div>{_(language, 'services.notary.features.bilingual')}
+                        <div></div>{
+                            _(language, "services.notary.features.bilingual")
+                        }
                     </li>
                 </ul>
                 <a href="#contact">
-                    {_(language, 'services.notary.cta')}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor">
+                    {_(language, "services.notary.cta")}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                    >
                         <path d="M5 12h14"></path>
                         <path d="m12 5 7 7-7 7"></path>
                     </svg>
@@ -154,28 +246,64 @@ const { language } = Astro.props;
                 <div class="hover-bg"></div>
                 <div class="icon-box">
                     <!-- Accounting Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="icon">
-                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon"
+                    >
+                        <path
+                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                        ></path>
+                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"
+                        ></rect>
                         <path d="M9 14h6"></path>
                         <path d="M9 18h6"></path>
                         <path d="M9 10h6"></path>
                     </svg>
                 </div>
-                <h3>{_(language, 'services.accounting.title')}</h3>
-                <p>{_(language, 'services.accounting.description')}</p>
+                <h3>{_(language, "services.accounting.title")}</h3>
+                <p>{_(language, "services.accounting.description")}</p>
                 <ul>
-                    <li><div></div>{_(language, 'services.accounting.features.personal')}</li>
-                    <li><div></div>{_(language, 'services.accounting.features.control')}</li>
-                    <li><div></div>{_(language, 'services.accounting.features.documents')}</li>
-                    <li><div></div>{_(language, 'services.accounting.features.support')}</li>
+                    <li>
+                        <div></div>{
+                            _(language, "services.accounting.features.personal")
+                        }
+                    </li>
+                    <li>
+                        <div></div>{
+                            _(language, "services.accounting.features.control")
+                        }
+                    </li>
+                    <li>
+                        <div></div>{
+                            _(
+                                language,
+                                "services.accounting.features.documents",
+                            )
+                        }
+                    </li>
+                    <li>
+                        <div></div>{
+                            _(language, "services.accounting.features.support")
+                        }
+                    </li>
                 </ul>
                 <a href="#contact">
-                    {_(language, 'services.accounting.cta')}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor">
+                    {_(language, "services.accounting.cta")}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                    >
                         <path d="M5 12h14"></path>
                         <path d="m12 5 7 7-7 7"></path>
                     </svg>
@@ -183,4 +311,416 @@ const { language } = Astro.props;
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<style>
+    /* Services Section */
+    .section-services {
+        position: relative;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+
+        .services-flex-row {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            @media (max-width: 700px) {
+                flex-direction: column;
+            }
+        }
+        .services-img-badge {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: stretch;
+            min-height: 420px;
+            max-width: 520px;
+            width: 100%;
+            .services-hero-img {
+                width: 100%;
+                height: 420px;
+                object-fit: cover;
+                border-radius: 1.5rem;
+                box-shadow: 0 10px 32px var(--color-shadow-light);
+                display: block;
+            }
+            .badge-card {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                min-width: 120px;
+                max-width: 70%;
+                background: var(--color-background-secondary);
+                border-radius: 1rem;
+                box-shadow: 0 8px 32px var(--color-shadow-medium);
+                padding: 0.75rem 1rem;
+                color: var(--color-text-primary);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                border: 1px solid var(--color-border-primary);
+            }
+            @media (max-width: 700px) {
+                min-height: unset;
+                .services-hero-img {
+                    height: 220px;
+                }
+                .badge-card {
+                    position: static;
+                    margin: 1rem auto 0 auto;
+                    width: 95%;
+                    max-width: 95%;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+        .meet-helpers {
+            margin-bottom: 2.5rem;
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--color-primary);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.01em;
+            }
+            p {
+                font-size: 1.15rem;
+                color: var(--color-text-secondary);
+                margin-bottom: 2rem;
+                line-height: 1.7;
+            }
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            @media (max-width: 700px) {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+        }
+
+        .feature-card {
+            text-align: center;
+            background-color: var(--color-background-secondary);
+            backdrop-filter: blur(20px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 25px 50px -12px var(--color-shadow-medium);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+            border: 1px solid var(--color-border-primary);
+
+            .icon-wrap {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+                box-shadow: 0 20px 40px var(--color-shadow-light);
+                transition: transform 0.3s ease;
+                background: var(--color-gradient-gold);
+
+                .icon {
+                    width: 2rem;
+                    height: 2rem;
+                    color: white;
+                }
+            }
+
+            .feature-title {
+                font-size: 1.875rem;
+                font-weight: bold;
+                color: var(--color-text-primary);
+                margin-bottom: 0.25rem;
+                transition: color 0.3s ease;
+            }
+
+            .feature-subtitle {
+                color: var(--color-text-secondary);
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            &:hover {
+                transform: scale(1.1) translateY(-0.5rem);
+
+                .feature-title {
+                    color: var(--color-primary);
+                }
+
+                .feature-subtitle {
+                    color: var(--color-text-primary);
+                }
+
+                .icon-wrap {
+                    transform: scale(1.1) rotate(12deg);
+                }
+            }
+
+            &.card-1 {
+                border: 1px solid rgba(255, 215, 0, 0.2);
+
+                &:hover {
+                    border-color: rgba(255, 215, 0, 0.5);
+                }
+
+                .icon-wrap {
+                    background: linear-gradient(
+                        to bottom right,
+                        #ffd700,
+                        #f59e0b
+                    );
+                }
+            }
+
+            &.card-2 {
+                border: 1px solid rgba(251, 191, 36, 0.2);
+
+                &:hover {
+                    border-color: rgba(251, 191, 36, 0.5);
+                }
+
+                .icon-wrap {
+                    background: linear-gradient(
+                        to bottom right,
+                        #f59e0b,
+                        #f97316
+                    );
+                }
+            }
+
+            &.card-3 {
+                border: 1px solid rgba(249, 115, 22, 0.2);
+
+                &:hover {
+                    border-color: rgba(249, 115, 22, 0.5);
+                }
+
+                .icon-wrap {
+                    background: linear-gradient(
+                        to bottom right,
+                        #f97316,
+                        #ef4444
+                    );
+                }
+            }
+        }
+
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+
+            @media (min-width: 1024px) {
+                padding: 0 2rem;
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 5rem;
+
+                .badge {
+                    background: var(--color-gradient-gold);
+                    color: var(--color-text-primary);
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 9999px;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    display: inline-block;
+                    box-shadow: 0 10px 25px var(--color-shadow-light);
+                    border: 1px solid var(--color-border-primary);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 15px 35px var(--color-shadow-medium);
+                    }
+                }
+
+                .title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: var(--color-text-primary);
+                    margin-block: 2rem;
+                    cursor: default;
+
+                    @media (min-width: 768px) {
+                        font-size: 3.75rem;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 1.25rem;
+                    color: var(--color-text-secondary);
+                    max-width: 64rem;
+                    margin: 0 auto;
+                    line-height: 1.75;
+                }
+            }
+
+            .service-grid {
+                display: grid;
+                gap: 2rem;
+
+                @media (min-width: 1024px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .card {
+                    position: relative;
+                    padding: 2.5rem;
+                    border-radius: 1.5rem;
+                    background: var(--color-background-secondary);
+                    backdrop-filter: blur(16px);
+                    border: 1px solid var(--color-border-primary);
+                    box-shadow: 0 20px 50px var(--color-shadow-light);
+                    overflow: hidden;
+                    transition: all 0.7s ease;
+
+                    &:hover {
+                        transform: translateY(-2rem) scale(1.05);
+                        box-shadow: 0 30px 60px var(--color-shadow-medium);
+                    }
+
+                    .hover-bg {
+                        position: absolute;
+                        inset: 0;
+                        opacity: 0;
+                        background: linear-gradient(
+                            to bottom right,
+                            var(--color-overlay-light),
+                            var(--color-overlay-medium)
+                        );
+                        transition: opacity 0.5s ease;
+
+                        .group:hover & {
+                            opacity: 1;
+                        }
+                    }
+
+                    .icon-box {
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 1.5rem;
+                        background: var(--color-gradient-gold);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 2rem;
+                        box-shadow: 0 10px 30px var(--color-shadow-light);
+                        transition: all 0.5s ease;
+
+                        .group:hover & {
+                            transform: scale(1.25) rotate(12deg);
+                        }
+
+                        svg {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            color: white;
+                            transition: transform 0.3s ease;
+
+                            .group:hover & {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: var(--color-text-primary);
+                        margin-bottom: 1.5rem;
+                        transition: color 0.3s ease;
+
+                        .group:hover & {
+                            color: var(--color-primary);
+                        }
+                    }
+
+                    p {
+                        color: var(--color-text-secondary);
+                        margin-bottom: 2rem;
+                        line-height: 1.75;
+                        transition: color 0.3s ease;
+
+                        .group:hover & {
+                            color: var(--color-text-tertiary);
+                        }
+                    }
+
+                    ul {
+                        margin-bottom: 2rem;
+                        padding: 0;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            color: var(--color-text-secondary);
+                            transition: all 0.3s ease;
+                            list-style: none;
+
+                            .group:hover & {
+                                color: var(--color-text-tertiary);
+                            }
+
+                            div {
+                                width: 0.75rem;
+                                height: 0.75rem;
+                                margin-right: 1rem;
+                                border-radius: 9999px;
+                                background: var(--color-gradient-primary);
+                                transition: transform 0.3s ease;
+
+                                .group:hover & {
+                                    transform: scale(1.25);
+                                }
+                            }
+                        }
+                    }
+
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        font-weight: 600;
+                        color: var(--color-primary);
+                        text-decoration: none;
+                        transition: all 0.3s ease;
+                        transform: scale(1);
+
+                        .group:hover & {
+                            transform: scale(1.1);
+                        }
+
+                        &:hover {
+                            color: var(--color-primary-light);
+                        }
+
+                        svg {
+                            margin-left: 0.5rem;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            transition: transform 0.3s ease;
+
+                            .group:hover & {
+                                transform: translateX(0.5rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
