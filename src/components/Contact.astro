@@ -42,15 +42,6 @@ const { language } = Astro.props;
                         <div class="info-content">
                             <h4>{_(language, "contact.info.email.label")}</h4>
                             <p id="email"></p>
-                            <script>
-                                const u = "hello";
-                                const d = "olympicmoris.com";
-                                const emailElement =
-                                    document.getElementById("email");
-                                if (emailElement) {
-                                    emailElement.innerHTML = `<a href="mailto:${u}@${d}">${u}@${d}</a>`;
-                                }
-                            </script>
                         </div>
                     </div>
                     <div class="info-item">
@@ -74,7 +65,7 @@ const { language } = Astro.props;
                         </div>
                         <div class="info-content">
                             <h4>{_(language, "contact.info.phone.label")}</h4>
-                            <p>+1 (702) 555-0123</p>
+                            <p id="phone"></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -252,6 +243,41 @@ const { language } = Astro.props;
         </div>
     </div>
 </section>
+
+<script>
+    function setContactInfo() {
+        const address = "legalservice";
+        const domain = "olympicmortis.net";
+        const emailElement = document.getElementById("email");
+        if (emailElement) {
+            emailElement.innerHTML = `<a href="mailto:${address}@${domain}">${address}@${domain}</a>`;
+        }
+        const phoneElement = document.getElementById("phone");
+        const extension = "+1";
+        const phoneNumber = "(702) 555-0123";
+        if (phoneElement) {
+            phoneElement.innerHTML = `${extension} ${phoneNumber}`;
+        }
+    }
+    const contactSectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setContactInfo();
+                    contactSectionObserver.disconnect();
+                }
+            });
+        },
+        {
+            rootMargin: "0px",
+            threshold: 0.5,
+        }
+    );
+    const contactSection = document.querySelector(".section-contact");
+    if (contactSection) {
+        contactSectionObserver.observe(contactSection);
+    }
+</script>
 
 <style>
     /* Contact Section */
