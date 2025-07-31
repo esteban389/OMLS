@@ -14,10 +14,6 @@ const contactEn: ContactTranslations = {
         'phone': {
             'label': 'Phone'
         },
-        'location': {
-            'label': 'Location',
-            'value': 'Online or directly at your home'
-        },
         'hours': {
             'label': 'Business Hours'
         }
@@ -26,7 +22,20 @@ const contactEn: ContactTranslations = {
         'weekdays': 'Monday to Saturday',
         'weekdays_time': '7:00 AM - 6:00 PM',
         'sunday': 'Sunday',
-        'closed': 'Closed'
+        'closed': 'Closed',
+        'status': {
+            'open': 'Open Now'
+        }
+    },
+    'actions': {
+        'email': 'Send Email',
+        'call': 'Call Now'
+    },
+    'cta': {
+        'title': 'Ready to Get Started?',
+        'description': 'Choose your preferred way to reach us. We\'re here to help with all your legal service needs.',
+        'email_button': 'Send Email',
+        'call_button': 'Call Us'
     },
     'form': {
         'title': 'Send Us a Message',

@@ -14,10 +14,6 @@ const contactEs: ContactTranslations = {
         'phone': {
             'label': 'Teléfono'
         },
-        'location': {
-            'label': 'Ubicación',
-            'value': 'En línea o directamente en tu hogar'
-        },
         'hours': {
             'label': 'Horario de atención'
         }
@@ -26,7 +22,20 @@ const contactEs: ContactTranslations = {
         'weekdays': 'Lunes a sábado',
         'weekdays_time': '7:00 AM - 6:00 PM',
         'sunday': 'Domingo',
-        'closed': 'Cerrado'
+        'closed': 'Cerrado',
+        'status': {
+            'open': 'Abierto Ahora'
+        }
+    },
+    'actions': {
+        'email': 'Enviar Correo',
+        'call': 'Llamar Ahora'
+    },
+    'cta': {
+        'title': '¿Listo para Comenzar?',
+        'description': 'Elige tu forma preferida de contactarnos. Estamos aquí para ayudarte con todas tus necesidades de servicios legales.',
+        'email_button': 'Enviar Correo',
+        'call_button': 'Llamarnos'
     },
     'form': {
         'title': 'Envíanos un mensaje',

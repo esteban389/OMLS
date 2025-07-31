@@ -109,10 +109,6 @@ export type ContactInfo = {
     phone: {
         label: string;
     };
-    location: {
-        label: string;
-        value: string;
-    };
     hours: {
         label: string;
     };
@@ -123,6 +119,9 @@ export type ContactHours = {
     weekdays_time: string;
     sunday: string;
     closed: string;
+    status: {
+        open: string;
+    };
 };
 
 export type ContactFormField = {
@@ -161,6 +160,16 @@ export type ContactTranslations = {
     };
     info: ContactInfo;
     hours: ContactHours;
+    actions: {
+        email: string;
+        call: string;
+    };
+    cta: {
+        title: string;
+        description: string;
+        email_button: string;
+        call_button: string;
+    };
     form: ContactForm;
 };
 

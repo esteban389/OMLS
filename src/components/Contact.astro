@@ -15,250 +15,182 @@ const { language } = Astro.props;
             <h2 class="title">{_(language, "contact.header.title")}</h2>
             <p class="subtitle">{_(language, "contact.header.subtitle")}</p>
         </div>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>{_(language, "contact.info.title")}</h3>
-                <div class="info-items">
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path
-                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                                >
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>{_(language, "contact.info.email.label")}</h4>
-                            <p id="email"></p>
-                        </div>
+        
+        <div class="contact-content">
+            <!-- Contact Information Cards -->
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
                     </div>
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                                >
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>{_(language, "contact.info.phone.label")}</h4>
-                            <p id="phone"></p>
-                        </div>
+                    <h3>{_(language, "contact.info.email.label")}</h3>
+                    <p id="email" class="contact-value"></p>
+                    <a href="#" id="email-link" class="contact-link">
+                        {_(language, "contact.actions.email")}
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
                     </div>
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path
-                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                                ></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>
-                                {_(language, "contact.info.location.label")}
-                            </h4>
-                            <p>{_(language, "contact.info.location.value")}</p>
-                        </div>
+                    <h3>{_(language, "contact.info.phone.label")}</h3>
+                    <p id="phone" class="contact-value"></p>
+                    <a href="#" id="phone-link" class="contact-link">
+                        {_(language, "contact.actions.call")}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Business Hours Section -->
+            <div class="hours-section">
+                <div class="hours-header">
+                    <h3>{_(language, "contact.info.hours.label")}</h3>
+                    <div id="status-badge" class="hours-badge">
+                        <span id="status-text"></span>
+                        <div class="status-indicator"></div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-content business-hours-info">
-                            <h4>{_(language, "contact.info.hours.label")}</h4>
-                            <div class="business-hours-container">
-                                <div class="hours-item">
-                                    <span class="day"
-                                        >{
-                                            _(
-                                                language,
-                                                "contact.hours.weekdays",
-                                            )
-                                        }</span
-                                    >
-                                    <span class="time"
-                                        >{
-                                            _(
-                                                language,
-                                                "contact.hours.weekdays_time",
-                                            )
-                                        }</span
-                                    >
-                                </div>
-                                <div class="hours-item closed">
-                                    <span class="day"
-                                        >{
-                                            _(language, "contact.hours.sunday")
-                                        }</span
-                                    >
-                                    <span class="time"
-                                        >{
-                                            _(language, "contact.hours.closed")
-                                        }</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <span class="day">{_(language, "contact.hours.weekdays")}</span>
+                        <span class="time">{_(language, "contact.hours.weekdays_time")}</span>
+                    </div>
+                    <div class="hours-item closed">
+                        <span class="day">{_(language, "contact.hours.sunday")}</span>
+                        <span class="time">{_(language, "contact.hours.closed")}</span>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <h3>{_(language, "contact.form.title")}</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="fullname"
-                            >{
-                                _(
-                                    language,
-                                    "contact.form.fields.fullname.label",
-                                )
-                            }</label
-                        >
-                        <input
-                            type="text"
-                            id="fullname"
-                            name="fullname"
-                            required
-                        />
+
+            <!-- Call to Action Section -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>{_(language, "contact.cta.title")}</h3>
+                    <p>{_(language, "contact.cta.description")}</p>
+                    <div class="cta-buttons">
+                        <a href="#" id="cta-email-link" class="btn-primary">
+                            {_(language, "contact.cta.email_button")}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#" id="cta-phone-link" class="btn-secondary">
+                            {_(language, "contact.cta.call_button")}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label for="email"
-                            >{
-                                _(language, "contact.form.fields.email.label")
-                            }</label
-                        >
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone"
-                            >{
-                                _(language, "contact.form.fields.phone.label")
-                            }</label
-                        >
-                        <input type="tel" id="phone" name="phone" />
-                    </div>
-                    <div class="form-group">
-                        <label for="service"
-                            >{
-                                _(language, "contact.form.fields.service.label")
-                            }</label
-                        >
-                        <select id="service" name="service">
-                            <option value=""
-                                >{
-                                    _(
-                                        language,
-                                        "contact.form.fields.service.options.default",
-                                    )
-                                }</option
-                            >
-                            <option value="tax"
-                                >{
-                                    _(
-                                        language,
-                                        "contact.form.fields.service.options.tax",
-                                    )
-                                }</option
-                            >
-                            <option value="notary"
-                                >{
-                                    _(
-                                        language,
-                                        "contact.form.fields.service.options.notary",
-                                    )
-                                }</option
-                            >
-                            <option value="accounting"
-                                >{
-                                    _(
-                                        language,
-                                        "contact.form.fields.service.options.accounting",
-                                    )
-                                }</option
-                            >
-                            <option value="other"
-                                >{
-                                    _(
-                                        language,
-                                        "contact.form.fields.service.options.other",
-                                    )
-                                }</option
-                            >
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message"
-                            >{
-                                _(language, "contact.form.fields.message.label")
-                            }</label
-                        >
-                        <textarea id="message" name="message" rows="5" required
-                        ></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">
-                        {_(language, "contact.form.submit")}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <script>
+    function isBusinessOpen() {
+        const now = new Date();
+        const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const currentTime = hour * 60 + minute; // Convert to minutes for easier comparison
+        
+        // Business hours: Monday to Saturday (1-6), 7:00 AM to 6:00 PM
+        const openTime = 7 * 60; // 7:00 AM in minutes
+        const closeTime = 18 * 60; // 6:00 PM in minutes
+        
+        // Check if it's a weekday (Monday to Saturday) and within business hours
+        return day >= 1 && day <= 6 && currentTime >= openTime && currentTime < closeTime;
+    }
+
+    function updateBusinessStatus() {
+        const statusBadge = document.getElementById("status-badge");
+        const statusText = document.getElementById("status-text");
+        
+        if (statusBadge && statusText) {
+            const isOpen = isBusinessOpen();
+            
+            if (isOpen) {
+                statusBadge.className = "hours-badge open";
+                statusText.textContent = "Open Now";
+            } else {
+                statusBadge.className = "hours-badge closed";
+                statusText.textContent = "Closed";
+            }
+        }
+    }
+
     function setContactInfo() {
         const address = "legalservice";
         const domain = "olympicmortis.net";
         const emailElement = document.getElementById("email");
+        const emailLink = document.getElementById("email-link");
+        const ctaEmailLink = document.getElementById("cta-email-link");
+        
         if (emailElement) {
-            emailElement.innerHTML = `<a href="mailto:${address}@${domain}">${address}@${domain}</a>`;
+            emailElement.textContent = `${address}@${domain}`;
         }
+        
+        if (emailLink) {
+            (emailLink as HTMLAnchorElement).href = `mailto:${address}@${domain}`;
+        }
+        
+        if (ctaEmailLink) {
+            (ctaEmailLink as HTMLAnchorElement).href = `mailto:${address}@${domain}`;
+        }
+        
         const phoneElement = document.getElementById("phone");
+        const phoneLink = document.getElementById("phone-link");
+        const ctaPhoneLink = document.getElementById("cta-phone-link");
         const extension = "+1";
         const phoneNumber = "(702) 555-0123";
+        
         if (phoneElement) {
-            phoneElement.innerHTML = `${extension} ${phoneNumber}`;
+            phoneElement.textContent = `${extension} ${phoneNumber}`;
         }
-    }
+        
+        if (phoneLink) {
+            (phoneLink as HTMLAnchorElement).href = `tel:${extension.replace(/\s/g, '')}${phoneNumber.replace(/\D/g, '')}`;
+        }
+        
+        if (ctaPhoneLink) {
+            (ctaPhoneLink as HTMLAnchorElement).href = `tel:${extension.replace(/\s/g, '')}${phoneNumber.replace(/\D/g, '')}`;
+        }
+        
+            // Update business status
+    updateBusinessStatus();
+    
+    // Update status every minute to keep it current
+    setInterval(updateBusinessStatus, 60000);
+}
+    
     const contactSectionObserver = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -273,6 +205,7 @@ const { language } = Astro.props;
             threshold: 0.5,
         }
     );
+    
     const contactSection = document.querySelector(".section-contact");
     if (contactSection) {
         contactSectionObserver.observe(contactSection);
@@ -340,263 +273,440 @@ const { language } = Astro.props;
                 }
             }
 
-            .contact-grid {
-                display: grid;
+            .contact-content {
+                display: flex;
+                flex-direction: column;
                 gap: 4rem;
 
-                @media (min-width: 1024px) {
-                    grid-template-columns: 1fr 1fr;
-                }
+                .contact-cards {
+                    display: grid;
+                    gap: 2rem;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-                .contact-info {
-                    background: var(--color-background-secondary);
-                    backdrop-filter: blur(16px);
-                    border-radius: 1.5rem;
-                    padding: 2.5rem;
-                    border: 1px solid var(--color-border-primary);
-                    box-shadow: 0 20px 50px var(--color-shadow-light);
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        transform: translateY(-0.5rem);
-                        box-shadow: 0 30px 60px var(--color-shadow-medium);
-                    }
-
-                    h3 {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        color: var(--color-text-primary);
-                        margin-bottom: 2rem;
-                        text-align: center;
-                    }
-
-                    .info-items {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2rem;
-
-                        .info-item {
-                            display: flex;
-                            align-items: center;
-                            gap: 1.5rem;
-                            transition: transform 0.3s ease;
-
-                            &:hover {
-                                transform: translateX(0.5rem);
-                            }
-
-                            .icon-box {
-                                width: 3.5rem;
-                                height: 3.5rem;
-                                border-radius: 1rem;
-                                background: var(--color-gradient-gold);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                box-shadow: 0 10px 30px
-                                    var(--color-shadow-light);
-                                transition: all 0.3s ease;
-
-                                svg {
-                                    width: 1.5rem;
-                                    height: 1.5rem;
-                                    color: white;
-                                }
-
-                                .info-item:hover & {
-                                    transform: scale(1.1) rotate(12deg);
-                                }
-                            }
-
-                            .business-hours-info {
-                                width: 100%;
-                                display: flex;
-                                flex-direction: column;
-                                gap: 1rem;
-                            }
-
-                            .info-content {
-                                h4 {
-                                    font-size: 1.125rem;
-                                    font-weight: 600;
-                                    color: var(--color-text-primary);
-                                    margin-bottom: 0.5rem;
-                                }
-
-                                p {
-                                    color: var(--color-text-secondary);
-                                    line-height: 1.6;
-                                }
-
-                                .business-hours-container {
-                                    background: linear-gradient(
-                                        135deg,
-                                        var(--color-overlay-light),
-                                        var(--color-overlay-medium)
-                                    );
-                                    border-radius: 1rem;
-                                    padding: 1.5rem;
-                                    border: 1px solid
-                                        var(--color-border-primary);
-                                    box-shadow: 0 10px 30px
-                                        var(--color-shadow-light);
-                                    transition: all 0.3s ease;
-
-                                    &:hover {
-                                        transform: translateY(-0.25rem);
-                                        box-shadow: 0 15px 40px
-                                            var(--color-shadow-medium);
-                                        border-color: var(
-                                            --color-border-secondary
-                                        );
-                                    }
-
-                                    .hours-item {
-                                        display: flex;
-                                        justify-content: space-between;
-                                        align-items: center;
-                                        padding: 0.75rem 0;
-                                        border-bottom: 1px solid
-                                            var(--color-border-tertiary);
-                                        transition: all 0.3s ease;
-
-                                        &:last-child {
-                                            border-bottom: none;
-                                        }
-
-                                        &:hover {
-                                            transform: translateX(0.5rem);
-                                            background: var(
-                                                --color-overlay-light
-                                            );
-                                            border-radius: 0.5rem;
-                                            padding-left: 0.75rem;
-                                            padding-right: 0.75rem;
-                                        }
-
-                                        .day {
-                                            font-weight: 600;
-                                            color: var(--color-text-primary);
-                                            font-size: 0.95rem;
-                                        }
-
-                                        .time {
-                                            color: var(--color-text-secondary);
-                                            font-weight: 500;
-                                            font-size: 0.9rem;
-                                        }
-
-                                        &.closed {
-                                            opacity: 0.6;
-
-                                            .time {
-                                                color: var(--color-error);
-                                                font-weight: 600;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .contact-form {
-                    background: var(--color-background-secondary);
-                    backdrop-filter: blur(16px);
-                    border-radius: 1.5rem;
-                    padding: 2.5rem;
-                    border: 1px solid var(--color-border-primary);
-                    box-shadow: 0 20px 50px var(--color-shadow-light);
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        transform: translateY(-0.5rem);
-                        box-shadow: 0 30px 60px var(--color-shadow-medium);
-                    }
-
-                    h3 {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        color: var(--color-text-primary);
-                        margin-bottom: 2rem;
-                        text-align: center;
-                    }
-
-                    .form-group {
-                        margin-bottom: 1.5rem;
-
-                        label {
-                            display: block;
-                            font-weight: 500;
-                            color: var(--color-text-primary);
-                            margin-bottom: 0.5rem;
-                            transition: color 0.3s ease;
-                        }
-
-                        input,
-                        select,
-                        textarea {
-                            width: 100%;
-                            padding: 1rem;
-                            border: 2px solid var(--color-border-primary);
-                            border-radius: 0.75rem;
-                            background: var(--color-background-tertiary);
-                            backdrop-filter: blur(10px);
-                            font-size: 1rem;
-                            color: var(--color-text-primary);
-                            transition: all 0.3s ease;
-                            box-sizing: border-box;
-
-                            &:focus {
-                                outline: none;
-                                border-color: var(--color-primary);
-                                box-shadow: 0 0 0 3px var(--color-overlay-light);
-                                transform: translateY(-2px);
-                            }
-
-                            &::placeholder {
-                                color: var(--color-text-muted);
-                            }
-                        }
-
-                        textarea {
-                            resize: vertical;
-                            min-height: 120px;
-                        }
-                    }
-
-                    .btn-primary {
-                        width: 100%;
-                        padding: 1.25rem 2.5rem;
-                        font-weight: 700;
-                        border-radius: 9999px;
+                    .contact-card {
+                        background: var(--color-background-secondary);
+                        backdrop-filter: blur(16px);
+                        border-radius: 1.5rem;
+                        padding: 2.5rem;
+                        border: 1px solid var(--color-border-primary);
+                        box-shadow: 0 20px 50px var(--color-shadow-light);
                         transition: all 0.3s ease;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        text-decoration: none;
-                        font-size: 1.25rem;
-                        background: var(--color-gradient-primary);
-                        color: var(--color-text-primary);
-                        box-shadow: 0 10px 15px var(--color-shadow-light);
-                        border: none;
-                        cursor: pointer;
+                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            height: 4px;
+                            background: var(--color-gradient-gold);
+                            transform: scaleX(0);
+                            transition: transform 0.3s ease;
+                        }
 
                         &:hover {
                             transform: translateY(-0.5rem);
-                            box-shadow: 0 20px 25px var(--color-shadow-medium);
+                            box-shadow: 0 30px 60px var(--color-shadow-medium);
 
-                            svg {
-                                transform: translateX(0.25rem);
+                            &::before {
+                                transform: scaleX(1);
                             }
                         }
 
-                        svg {
-                            margin-left: 0.5rem;
-                            height: 1.25rem;
-                            width: 1.25rem;
-                            transition: transform 0.3s ease;
+                        .card-icon {
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 1rem;
+                            background: var(--color-gradient-gold);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto 1.5rem;
+                            box-shadow: 0 10px 30px var(--color-shadow-light);
+                            transition: all 0.3s ease;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                inset: -2px;
+                                background: var(--color-gradient-gold);
+                                border-radius: 1rem;
+                                opacity: 0.3;
+                                filter: blur(8px);
+                                transition: all 0.3s ease;
+                            }
+
+                            svg {
+                                width: 1.75rem;
+                                height: 1.75rem;
+                                color: white;
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            .contact-card:hover & {
+                                transform: scale(1.1) rotate(12deg);
+
+                                &::after {
+                                    opacity: 0.6;
+                                    filter: blur(12px);
+                                }
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.25rem;
+                            font-weight: bold;
+                            color: var(--color-text-primary);
+                            margin-bottom: 1rem;
+                        }
+
+                        .contact-value {
+                            font-size: 1.125rem;
+                            color: var(--color-text-secondary);
+                            margin-bottom: 1.5rem;
+                            line-height: 1.6;
+                        }
+
+                        .contact-link {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            padding: 0.75rem 1.5rem;
+                            background: var(--color-gradient-primary);
+                            color: var(--color-text-primary);
+                            text-decoration: none;
+                            border-radius: 9999px;
+                            font-weight: 600;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 5px 15px var(--color-shadow-light);
+                            position: relative;
+                            overflow: hidden;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                                transition: left 0.5s ease;
+                            }
+
+                            &:hover {
+                                transform: translateY(-2px);
+                                box-shadow: 0 10px 25px var(--color-shadow-medium);
+
+                                &::before {
+                                    left: 100%;
+                                }
+                            }
+
+                            svg {
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                .hours-section {
+                    background: var(--color-background-secondary);
+                    backdrop-filter: blur(16px);
+                    border-radius: 1.5rem;
+                    padding: 2.5rem;
+                    border: 1px solid var(--color-border-primary);
+                    box-shadow: 0 20px 50px var(--color-shadow-light);
+                    transition: all 0.3s ease;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 3px;
+                        background: var(--color-gradient-gold);
+                        transform: scaleX(0);
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        transform: translateY(-0.5rem);
+                        box-shadow: 0 30px 60px var(--color-shadow-medium);
+
+                        &::before {
+                            transform: scaleX(1);
+                        }
+                    }
+
+                    .hours-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 2rem;
+
+                        h3 {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            color: var(--color-text-primary);
+                        }
+
+                        .hours-badge {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            padding: 0.5rem 1rem;
+                            border-radius: 9999px;
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                            transition: all 0.3s ease;
+                            position: relative;
+                            overflow: hidden;
+
+                            .status-indicator {
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                animation: pulse 2s infinite;
+                            }
+
+                            &.open {
+                                background: linear-gradient(135deg, #10b981, #059669);
+                                color: white;
+                                box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+
+                                .status-indicator {
+                                    background: #ffffff;
+                                }
+                            }
+
+                            &.closed {
+                                background: linear-gradient(135deg, #ef4444, #dc2626);
+                                color: white;
+                                box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+
+                                .status-indicator {
+                                    background: #ffffff;
+                                    animation: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .hours-grid {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        .hours-item {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 1rem;
+                            background: var(--color-background-tertiary);
+                            border-radius: 0.75rem;
+                            border: 1px solid var(--color-border-primary);
+                            transition: all 0.3s ease;
+                            position: relative;
+                            overflow: hidden;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                width: 4px;
+                                background: var(--color-gradient-gold);
+                                transform: scaleY(0);
+                                transition: transform 0.3s ease;
+                            }
+
+                            &:hover {
+                                transform: translateX(0.5rem);
+                                background: var(--color-overlay-light);
+                                border-color: var(--color-border-secondary);
+
+                                &::before {
+                                    transform: scaleY(1);
+                                }
+                            }
+
+                            .day {
+                                font-weight: 600;
+                                color: var(--color-text-primary);
+                                font-size: 1rem;
+                            }
+
+                            .time {
+                                color: var(--color-text-secondary);
+                                font-weight: 500;
+                                font-size: 0.95rem;
+                            }
+
+                            &.closed {
+                                opacity: 0.6;
+
+                                .time {
+                                    color: var(--color-error);
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cta-section {
+                    background: linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-background-tertiary) 100%);
+                    border-radius: 1.5rem;
+                    padding: 3rem;
+                    text-align: center;
+                    box-shadow: 0 20px 50px var(--color-shadow-light);
+                    border: 1px solid var(--color-border-primary);
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+                        pointer-events: none;
+                    }
+
+                    .cta-content {
+                        max-width: 48rem;
+                        margin: 0 auto;
+                        position: relative;
+                        z-index: 1;
+
+                        h3 {
+                            font-size: 2rem;
+                            font-weight: bold;
+                            color: var(--color-text-primary);
+                            margin-bottom: 1rem;
+                            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        }
+
+                        p {
+                            font-size: 1.125rem;
+                            color: var(--color-text-secondary);
+                            margin-bottom: 2rem;
+                            line-height: 1.6;
+                        }
+
+                        .cta-buttons {
+                            display: flex;
+                            gap: 1rem;
+                            justify-content: center;
+                            flex-wrap: wrap;
+
+                            .btn-primary,
+                            .btn-secondary {
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 0.5rem;
+                                padding: 1rem 2rem;
+                                border-radius: 9999px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                transition: all 0.3s ease;
+                                font-size: 1rem;
+                                position: relative;
+                                overflow: hidden;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: -100%;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                                    transition: left 0.5s ease;
+                                }
+
+                                &:hover {
+                                    transform: translateY(-2px);
+
+                                    &::before {
+                                        left: 100%;
+                                    }
+                                }
+
+                                svg {
+                                    width: 1.25rem;
+                                    height: 1.25rem;
+                                }
+                            }
+
+                            .btn-primary {
+                                background: var(--color-gradient-gold);
+                                color: var(--color-text-primary);
+                                box-shadow: 0 10px 25px var(--color-shadow-light);
+
+                                &:hover {
+                                    box-shadow: 0 15px 35px var(--color-shadow-medium);
+                                }
+                            }
+
+                            .btn-secondary {
+                                background: var(--color-background-secondary);
+                                color: var(--color-text-primary);
+                                border: 2px solid var(--color-border-primary);
+                                box-shadow: 0 10px 25px var(--color-shadow-light);
+
+                                &:hover {
+                                    box-shadow: 0 15px 35px var(--color-shadow-medium);
+                                    border-color: var(--color-border-secondary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-contact {
+            .container {
+                .contact-content {
+                    .cta-section {
+                        .cta-content {
+                            .cta-buttons {
+                                flex-direction: column;
+                                align-items: center;
+
+                                .btn-primary,
+                                .btn-secondary {
+                                    width: 100%;
+                                    max-width: 300px;
+                                    justify-content: center;
+                                }
+                            }
                         }
                     }
                 }
