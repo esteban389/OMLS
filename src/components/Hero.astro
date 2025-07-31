@@ -1,5 +1,5 @@
 ---
-import { _, type TranslationLanguage } from '../translations/translation';
+import { _, type TranslationLanguage } from "../translations/translation";
 
 interface Props {
     language: TranslationLanguage;
@@ -20,35 +20,286 @@ const { language } = Astro.props;
     <div class="hero-main-content">
         <div class="hero-left">
             <div class="hero-badge">
-                <span style="color:#FFD700; font-size:1.1em; vertical-align:middle; margin-right:0.5em;">&#9733;</span>
-                {_(language, 'hero.badge')}
+                <span
+                    style="color:#FFD700; font-size:1.1em; vertical-align:middle; margin-right:0.5em;"
+                    >&#9733;</span
+                >
+                {_(language, "hero.badge")}
             </div>
             <h1>
-                {_(language, 'hero.title.line1')}
-                <span class="hero-sub">{_(language, 'hero.title.line2')}</span>
+                {_(language, "hero.title.line1")}
+                <span class="hero-sub">{_(language, "hero.title.line2")}</span>
             </h1>
-            <p class="lead">{_(language, 'hero.lead')}</p>
+            <p class="lead">{_(language, "hero.lead")}</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn-primary">
-                    {_(language, 'hero.actions.primary')}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
+                    {_(language, "hero.actions.primary")}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
                     </svg>
                 </a>
                 <a href="#services" class="btn-secondary">
-                    {_(language, 'hero.actions.secondary')}
+                    {_(language, "hero.actions.secondary")}
                 </a>
             </div>
         </div>
         <div class="hero-why-card">
-            <h3>{_(language, 'hero.why_choose_us.title')}</h3>
+            <h3>{_(language, "hero.why_choose_us.title")}</h3>
             <ul>
-                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.bilingual')}</li>
-                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.personalized')}</li>
-                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.transparent')}</li>
-                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.quick')}</li>
+                <li>
+                    <span>&#10003;</span>
+                    {_(language, "hero.why_choose_us.points.bilingual")}
+                </li>
+                <li>
+                    <span>&#10003;</span>
+                    {_(language, "hero.why_choose_us.points.personalized")}
+                </li>
+                <li>
+                    <span>&#10003;</span>
+                    {_(language, "hero.why_choose_us.points.transparent")}
+                </li>
+                <li>
+                    <span>&#10003;</span>
+                    {_(language, "hero.why_choose_us.points.quick")}
+                </li>
             </ul>
         </div>
     </div>
-</section> 
+</section>
+
+<style>
+    .bg-blur {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(100px);
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("/images/hero.png") center center/cover
+            no-repeat;
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                border-radius: 2rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+
+                &.btn-primary {
+                    background: var(--color-gradient-primary);
+                    color: var(--color-text-primary);
+                    box-shadow: 0 10px 15px var(--color-shadow-light);
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 20px 25px var(--color-shadow-medium);
+
+                        svg {
+                            transform: translateX(4px);
+                        }
+                    }
+
+                    svg {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                &.btn-secondary {
+                    background: var(--color-background-tertiary);
+                    color: var(--color-text-secondary);
+                    border: 2px solid var(--color-border-primary);
+                    backdrop-filter: blur(10px);
+
+                    &:hover {
+                        background: var(--color-overlay-light);
+                        color: var(--color-primary);
+                        border-color: var(--color-primary);
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                    to right,
+                    rgba(20, 20, 20, 0.7) 20%,
+                    rgba(20, 20, 20, 0.2) 80%,
+                    rgba(20, 20, 20, 0) 100%
+                ),
+                linear-gradient(
+                    to top,
+                    rgba(20, 20, 20, 0.7) 20%,
+                    rgba(20, 20, 20, 0.1) 80%,
+                    rgba(20, 20, 20, 0) 100%
+                );
+            z-index: 1;
+        }
+
+        .hero-main-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 3rem 2rem;
+        }
+
+        .hero-left {
+            flex: 1 1 400px;
+            min-width: 320px;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.15);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 2rem;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-left h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-left .hero-sub {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-left p {
+            font-size: 1.25rem;
+            color: #f3f4f6;
+            margin-bottom: 2.5rem;
+            max-width: 40rem;
+        }
+
+        .hero-left .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-why-card {
+            flex: 1 1 340px;
+            min-width: 320px;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(16px);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            padding: 2.5rem 2rem;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-why-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #fff;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-why-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .hero-why-card li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-why-card li span {
+            color: #ffd700;
+            font-size: 1.3em;
+        }
+
+        @media (max-width: 900px) {
+            .hero-main-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2.5rem;
+            }
+
+            .hero-why-card {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 400px;
+                padding: 1rem 0;
+            }
+
+            .hero-main-content {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .hero-left h1 {
+                font-size: 2rem;
+            }
+
+            .hero-left .hero-sub {
+                font-size: 1.3rem;
+            }
+
+            .hero-why-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+    }
+</style>
