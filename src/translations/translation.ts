@@ -187,25 +187,35 @@ export type FAQTranslations = {
     };
 };
 
-export type FooterSection = {
+export type FooterSectionCompany = {
     title: string;
-    links?: {
-        tax?: string;
-        notary?: string;
-        accounting?: string;
-        itin?: string;
-        about?: string;
-        contact?: string;
-        faq?: string;
+    links: {
+        about: string;
+        contact: string;
+        faq: string;
     };
+};
+
+export type FooterSectionServices = {
+    title: string;
+    links: {
+        tax: string;
+        notary: string;
+        accounting: string;
+        itin: string;
+    };
+};
+
+export type FooterSectionContactInfo = {
+    title: string;
 };
 
 export type FooterTranslations = {
     description: string;
     sections: {
-        services: FooterSection;
-        company: FooterSection;
-        contact_info: FooterSection;
+        services: FooterSectionServices;
+        company: FooterSectionCompany;
+        contact_info: FooterSectionContactInfo;
     };
     copyright: string;
 };
