@@ -1,0 +1,125 @@
+---
+import { _, type TranslationLanguage } from '../translations/translation';
+
+interface Props {
+    language: TranslationLanguage;
+}
+
+const { language } = Astro.props;
+---
+
+<section id="faq" class="section-faq">
+    <div class="container">
+        <div class="header">
+            <div class="badge">{_(language, 'faq.header.badge')}</div>
+            <h2 class="title">{_(language, 'faq.header.title')}</h2>
+            <p class="subtitle">{_(language, 'faq.header.subtitle')}</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question" data-faq="1">
+                    <h3>{_(language, 'faq.questions.tax_time.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="1">
+                    <p>{_(language, 'faq.questions.tax_time.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="2">
+                    <h3>{_(language, 'faq.questions.mobile_notary.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="2">
+                    <p>{_(language, 'faq.questions.mobile_notary.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="3">
+                    <h3>{_(language, 'faq.questions.documents.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="3">
+                    <p>{_(language, 'faq.questions.documents.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="4">
+                    <h3>{_(language, 'faq.questions.spanish.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="4">
+                    <p>{_(language, 'faq.questions.spanish.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="5">
+                    <h3>{_(language, 'faq.questions.irs_problems.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="5">
+                    <p>{_(language, 'faq.questions.irs_problems.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="6">
+                    <h3>{_(language, 'faq.questions.itin_requirements.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="6">
+                    <p>{_(language, 'faq.questions.itin_requirements.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="7">
+                    <h3>{_(language, 'faq.questions.payment_methods.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="7">
+                    <p>{_(language, 'faq.questions.payment_methods.answer')}</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-faq="8">
+                    <h3>{_(language, 'faq.questions.appointment.question')}</h3>
+                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer" data-faq="8">
+                    <p>{_(language, 'faq.questions.appointment.answer')}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

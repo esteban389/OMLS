@@ -1,0 +1,54 @@
+---
+import { _, type TranslationLanguage } from '../translations/translation';
+
+interface Props {
+    language: TranslationLanguage;
+}
+
+const { language } = Astro.props;
+---
+
+<section class="hero" id="hero">
+    <div class="bg-blur circle-1"></div>
+    <div class="bg-blur circle-2"></div>
+    <div class="bg-blur circle-3"></div>
+    <div class="dot dot-1"></div>
+    <div class="dot dot-2"></div>
+    <div class="dot dot-3"></div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-main-content">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span style="color:#FFD700; font-size:1.1em; vertical-align:middle; margin-right:0.5em;">&#9733;</span>
+                {_(language, 'hero.badge')}
+            </div>
+            <h1>
+                {_(language, 'hero.title.line1')}
+                <span class="hero-sub">{_(language, 'hero.title.line2')}</span>
+            </h1>
+            <p class="lead">{_(language, 'hero.lead')}</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">
+                    {_(language, 'hero.actions.primary')}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#services" class="btn-secondary">
+                    {_(language, 'hero.actions.secondary')}
+                </a>
+            </div>
+        </div>
+        <div class="hero-why-card">
+            <h3>{_(language, 'hero.why_choose_us.title')}</h3>
+            <ul>
+                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.bilingual')}</li>
+                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.personalized')}</li>
+                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.transparent')}</li>
+                <li><span>&#10003;</span> {_(language, 'hero.why_choose_us.points.quick')}</li>
+            </ul>
+        </div>
+    </div>
+</section> 

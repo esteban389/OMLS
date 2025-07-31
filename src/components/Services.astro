@@ -1,0 +1,186 @@
+---
+import { _, type TranslationLanguage } from '../translations/translation';
+
+interface Props {
+    language: TranslationLanguage;
+}
+
+const { language } = Astro.props;
+---
+
+<section id="services" class="section-services">
+    <div class="container">
+        <div class="header">
+            <div class="badge">{_(language, 'services.header.badge')}</div>
+            <h2 class="title">{_(language, 'services.header.title')}</h2>
+            <p class="subtitle">
+                {_(language, 'services.header.subtitle')}
+            </p>
+        </div>
+        <div class="services-flex-row">
+            <div class="services-img-badge">
+                <img src="/assets/images/services.png" alt="Three people smiling" class="services-hero-img">
+                <div class="badge-card feature-card card-1">
+                    <div class="icon-wrap gold-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <circle cx="12" cy="8" r="6"></circle>
+                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-title">{_(language, 'about.features.excellence.title')}</div>
+                    <div class="feature-subtitle">{_(language, 'about.features.excellence.subtitle')}</div>
+                </div>
+            </div>
+            <div class="meet-helpers">
+                <h3>Meet your helpers</h3>
+                <p>Our certified professionals are here to make your legal journey smooth and enjoyable. We believe in personal service with a smile! 😊</p>
+                <div class="features-grid">
+                    <div class="feature-card card-2">
+                        <div class="icon-wrap amber-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-title">{_(language, 'about.features.services.title')}</div>
+                        <div class="feature-subtitle">{_(language, 'about.features.services.subtitle')}</div>
+                    </div>
+                    <div class="feature-card card-3">
+                        <div class="icon-wrap orange-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-title">{_(language, 'about.features.bilingual.title')}</div>
+                        <div class="feature-subtitle">{_(language, 'about.features.bilingual.subtitle')}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service-grid">
+            <div class="card group card-tax">
+                <div class="hover-bg"></div>
+                <div class="icon-box">
+                    <!-- Tax Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon">
+                        <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                        <line x1="8" x2="16" y1="6" y2="6"></line>
+                        <line x1="16" x2="16" y1="14" y2="18"></line>
+                        <path d="M16 10h.01"></path>
+                        <path d="M12 10h.01"></path>
+                        <path d="M8 10h.01"></path>
+                        <path d="M12 14h.01"></path>
+                        <path d="M8 14h.01"></path>
+                        <path d="M12 18h.01"></path>
+                        <path d="M8 18h.01"></path>
+                    </svg>
+                </div>
+                <h3>{_(language, 'services.tax.title')}</h3>
+                <p>{_(language, 'services.tax.description')}</p>
+                <ul>
+                    <li>
+                        <div></div>{_(language, 'services.tax.features.personal')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.tax.features.itin')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.tax.features.payment')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.tax.features.audit')}
+                    </li>
+                </ul>
+                <a href="#contact">
+                    {_(language, 'services.tax.cta')}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card group card-docs">
+                <div class="hover-bg"></div>
+                <div class="icon-box">
+                    <!-- File Check Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                        <path d="m9 15 2 2 4-4"></path>
+                    </svg>
+                </div>
+                <h3>{_(language, 'services.notary.title')}</h3>
+                <p>{_(language, 'services.notary.description')}</p>
+                <ul>
+                    <li>
+                        <div></div>{_(language, 'services.notary.features.contracts')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.notary.features.mobile')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.notary.features.closings')}
+                    </li>
+                    <li>
+                        <div></div>{_(language, 'services.notary.features.bilingual')}
+                    </li>
+                </ul>
+                <a href="#contact">
+                    {_(language, 'services.notary.cta')}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card group card-closing">
+                <div class="hover-bg"></div>
+                <div class="icon-box">
+                    <!-- Accounting Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                        <path d="M9 14h6"></path>
+                        <path d="M9 18h6"></path>
+                        <path d="M9 10h6"></path>
+                    </svg>
+                </div>
+                <h3>{_(language, 'services.accounting.title')}</h3>
+                <p>{_(language, 'services.accounting.description')}</p>
+                <ul>
+                    <li><div></div>{_(language, 'services.accounting.features.personal')}</li>
+                    <li><div></div>{_(language, 'services.accounting.features.control')}</li>
+                    <li><div></div>{_(language, 'services.accounting.features.documents')}</li>
+                    <li><div></div>{_(language, 'services.accounting.features.support')}</li>
+                </ul>
+                <a href="#contact">
+                    {_(language, 'services.accounting.cta')}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> 

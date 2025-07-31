@@ -1,0 +1,77 @@
+---
+import { _, type TranslationLanguage } from '../translations/translation';
+
+interface Props {
+    language: TranslationLanguage;
+}
+
+const { language } = Astro.props;
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/assets/images/logo.webp" alt="Logo">
+                </div>
+                <p>{_(language, 'footer.description')}</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>{_(language, 'footer.sections.services.title')}</h4>
+                <ul>
+                    <li><a href="#services">{_(language, 'footer.sections.services.links.tax')}</a></li>
+                    <li><a href="#services">{_(language, 'footer.sections.services.links.notary')}</a></li>
+                    <li><a href="#services">{_(language, 'footer.sections.services.links.accounting')}</a></li>
+                    <li><a href="#services">{_(language, 'footer.sections.services.links.itin')}</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>{_(language, 'footer.sections.company.title')}</h4>
+                <ul>
+                    <li><a href="#about">{_(language, 'footer.sections.company.links.about')}</a></li>
+                    <li><a href="#contact">{_(language, 'footer.sections.company.links.contact')}</a></li>
+                    <li><a href="#faq">{_(language, 'footer.sections.company.links.faq')}</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>{_(language, 'footer.sections.contact_info.title')}</h4>
+                <ul>
+                    <li>hello@olympicmoris.com</li>
+                    <li>+1 (702) 555-0123</li>
+                    <li>{_(language, 'contact.info.location.value')}</li>
+                    <li>{_(language, 'contact.hours.weekdays')}: {_(language, 'contact.hours.weekdays_time')}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>{_(language, 'footer.copyright')}</p>
+        </div>
+    </div>
+</footer> 

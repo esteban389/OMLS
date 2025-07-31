@@ -1,0 +1,69 @@
+---
+import { _, type TranslationLanguage } from '../translations/translation';
+
+interface Props {
+    language: TranslationLanguage;
+}
+
+const { language } = Astro.props;
+---
+
+<section id="about">
+    <div class="gradient-bg"></div>
+    <div class="container">
+        <div class="philosophy-tag">{_(language, 'about.philosophy_tag')}</div>
+        <div class="grid-wrapper">
+            <div>
+                <h2 class="main-heading">
+                    {_(language, 'about.title.line1')}
+                    <span class="gradient-text">{_(language, 'about.title.line2')}</span>
+                </h2>
+                <p class="intro-paragraph">
+                    {_(language, 'about.intro.paragraph1')}
+                </p>
+                <p class="intro-paragraph">
+                    {_(language, 'about.intro.paragraph2')}
+                </p>
+                <div class="features-grid">
+                    
+                </div>
+            </div>
+            <div class="right-feature-container">
+                <div class="highlight-overlay"></div>
+                <h3>{_(language, 'about.differences.title')}</h3>
+                <ul>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg><span class="feature-subtitle">{_(language, 'about.differences.points.dedication')}</span></li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span class="feature-subtitle">{_(language, 'about.differences.points.pricing')}</span>
+                    </li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span class="feature-subtitle">{_(language, 'about.differences.points.responsiveness')}</span>
+                    </li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span class="feature-subtitle">{_(language, 'about.differences.points.support')}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> 
