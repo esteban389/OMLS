@@ -1,5 +1,5 @@
 ---
-import { _, type TranslationLanguage } from '../translations/translation';
+import { _, type TranslationLanguage } from "../translations/translation";
 
 interface Props {
     language: TranslationLanguage;
@@ -11,115 +11,407 @@ const { language } = Astro.props;
 <section id="faq" class="section-faq">
     <div class="container">
         <div class="header">
-            <div class="badge">{_(language, 'faq.header.badge')}</div>
-            <h2 class="title">{_(language, 'faq.header.title')}</h2>
-            <p class="subtitle">{_(language, 'faq.header.subtitle')}</p>
+            <div class="badge">{_(language, "faq.header.badge")}</div>
+            <h2 class="title">{_(language, "faq.header.title")}</h2>
+            <p class="subtitle">{_(language, "faq.header.subtitle")}</p>
         </div>
         <div class="faq-grid">
             <div class="faq-item">
                 <button class="faq-question" data-faq="1">
-                    <h3>{_(language, 'faq.questions.tax_time.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>{_(language, "faq.questions.tax_time.question")}</h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="1">
-                    <p>{_(language, 'faq.questions.tax_time.answer')}</p>
+                    <p>{_(language, "faq.questions.tax_time.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="2">
-                    <h3>{_(language, 'faq.questions.mobile_notary.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>
+                        {_(language, "faq.questions.mobile_notary.question")}
+                    </h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="2">
-                    <p>{_(language, 'faq.questions.mobile_notary.answer')}</p>
+                    <p>{_(language, "faq.questions.mobile_notary.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="3">
-                    <h3>{_(language, 'faq.questions.documents.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>{_(language, "faq.questions.documents.question")}</h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="3">
-                    <p>{_(language, 'faq.questions.documents.answer')}</p>
+                    <p>{_(language, "faq.questions.documents.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="4">
-                    <h3>{_(language, 'faq.questions.spanish.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>{_(language, "faq.questions.spanish.question")}</h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="4">
-                    <p>{_(language, 'faq.questions.spanish.answer')}</p>
+                    <p>{_(language, "faq.questions.spanish.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="5">
-                    <h3>{_(language, 'faq.questions.irs_problems.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>
+                        {_(language, "faq.questions.irs_problems.question")}
+                    </h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="5">
-                    <p>{_(language, 'faq.questions.irs_problems.answer')}</p>
+                    <p>{_(language, "faq.questions.irs_problems.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="6">
-                    <h3>{_(language, 'faq.questions.itin_requirements.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>
+                        {
+                            _(
+                                language,
+                                "faq.questions.itin_requirements.question",
+                            )
+                        }
+                    </h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="6">
-                    <p>{_(language, 'faq.questions.itin_requirements.answer')}</p>
+                    <p>
+                        {_(language, "faq.questions.itin_requirements.answer")}
+                    </p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="7">
-                    <h3>{_(language, 'faq.questions.payment_methods.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>
+                        {_(language, "faq.questions.payment_methods.question")}
+                    </h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="7">
-                    <p>{_(language, 'faq.questions.payment_methods.answer')}</p>
+                    <p>{_(language, "faq.questions.payment_methods.answer")}</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" data-faq="8">
-                    <h3>{_(language, 'faq.questions.appointment.question')}</h3>
-                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
+                    <h3>{_(language, "faq.questions.appointment.question")}</h3>
+                    <svg
+                        class="faq-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m6 9 6 6 6-6"></path>
                     </svg>
                 </button>
                 <div class="faq-answer" data-faq="8">
-                    <p>{_(language, 'faq.questions.appointment.answer')}</p>
+                    <p>{_(language, "faq.questions.appointment.answer")}</p>
                 </div>
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<script>
+    const faqGrid = document.querySelector(".faq-grid");
+    if (faqGrid) {
+        faqGrid.addEventListener("click", (e) => {
+            const target = e.target;
+            if (target instanceof HTMLElement) {
+                const faqItem = target.closest(".faq-item");
+                if (faqItem) {
+                    faqItem.classList.toggle("active");
+                }
+            }
+        });
+    }
+</script>
+
+<style>
+    /* FAQ Section */
+    .section-faq {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        position: relative;
+        background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.5),
+            rgba(239, 246, 255, 0.5)
+        );
+
+        [data-theme="dark"] & {
+            background: linear-gradient(
+                to bottom right,
+                var(--color-overlay-light),
+                var(--color-overlay-medium)
+            );
+        }
+
+        .container {
+            position: relative;
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            @media (min-width: 1024px) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            > .container {
+                position: relative;
+                max-width: 80rem;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                @media (min-width: 1024px) {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 4rem;
+
+                .badge {
+                    background: var(--color-gradient-gold);
+                    color: var(--color-text-primary);
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 9999px;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    display: inline-block;
+                    box-shadow: 0 10px 25px var(--color-shadow-light);
+                    border: 1px solid var(--color-border-primary);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 15px 35px var(--color-shadow-medium);
+                    }
+                }
+
+                .title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: var(--color-text-primary);
+                    margin-block: 2rem;
+                    cursor: default;
+
+                    @media (min-width: 768px) {
+                        font-size: 3.75rem;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 1.25rem;
+                    color: var(--color-text-secondary);
+                    max-width: 64rem;
+                    margin: 0 auto;
+                    line-height: 1.75;
+                }
+            }
+
+            .faq-grid {
+                display: grid;
+                gap: 1.5rem;
+                max-width: 64rem;
+                margin: 0 auto;
+
+                .faq-item {
+                    background: var(--color-background-secondary);
+                    backdrop-filter: blur(16px);
+                    border-radius: 1rem;
+                    border: 1px solid var(--color-border-primary);
+                    box-shadow: 0 10px 30px var(--color-shadow-light);
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+
+                    &:hover,
+                    &:focus {
+                        transform: translateY(-0.25rem);
+                        box-shadow: 0 20px 40px var(--color-shadow-medium);
+                    }
+
+                    .faq-question {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1.5rem;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        width: 100%;
+                        text-align: left;
+
+                        &:hover,
+                        &:focus {
+                            background: var(--color-overlay-light);
+
+                            h3 {
+                                color: var(--color-primary);
+                            }
+
+                            .faq-icon {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.125rem;
+                            font-weight: 600;
+                            color: var(--color-text-primary);
+                            margin: 0;
+                            transition: color 0.3s ease;
+                        }
+
+                        .faq-icon {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            color: var(--color-primary);
+                            transition: transform 0.3s ease;
+                            flex-shrink: 0;
+
+                            .faq-item.active & {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    .faq-answer {
+                        padding: 0 1.5rem;
+                        border-top: 1px solid var(--color-border-tertiary);
+                        max-height: 0;
+                        overflow: hidden;
+                        transition:
+                            all 0.2s ease,
+                            filter 0.2s ease-in-out,
+                            opacity 0.2s ease;
+                        filter: blur(4px);
+                        opacity: 0;
+                        margin: 0;
+
+                        .faq-item.active & {
+                            max-height: 200px;
+                            padding: 1.5rem;
+                            opacity: 1;
+                            margin-bottom: 0;
+                            filter: blur(0);
+                        }
+
+                        p {
+                            color: var(--color-text-secondary);
+                            line-height: 1.75;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
