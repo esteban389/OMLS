@@ -1,7 +1,7 @@
 import type { HeroTranslations } from "../translation";
 
 const heroEn: HeroTranslations = {
-    'badge': 'Trusted by 1000+ clients nationwide',
+    'badge': 'The friendly tax and legal experts you can trust',
     'title': {
         'line1': 'We make legal and tax matters',
         'line2': 'easy and stress-free'

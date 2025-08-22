@@ -133,16 +133,21 @@ const { language } = Astro.props;
     function updateBusinessStatus() {
         const statusBadge = document.getElementById("status-badge");
         const statusText = document.getElementById("status-text");
-        
+        const language = document.querySelector("html")?.getAttribute("lang") || "en";
+        const spanishOpenMessage = "Abierto Ahora";
+        const englishOpenMessage = "Open Now";
+        const spanishClosedMessage = "Cerrado";
+        const englishClosedMessage = "Closed";
+
         if (statusBadge && statusText) {
             const isOpen = isBusinessOpen();
             
             if (isOpen) {
                 statusBadge.className = "hours-badge open";
-                statusText.textContent = "Open Now";
+                statusText.textContent = language === "es" ? spanishOpenMessage : englishOpenMessage;
             } else {
                 statusBadge.className = "hours-badge closed";
-                statusText.textContent = "Closed";
+                statusText.textContent = language === "es" ? spanishClosedMessage : englishClosedMessage;
             }
         }
     }
@@ -160,17 +165,21 @@ const { language } = Astro.props;
         
         if (emailLink) {
             (emailLink as HTMLAnchorElement).href = `mailto:${address}@${domain}`;
+            const newEmailLink = emailLink.cloneNode(true);
+            emailLink.replaceWith(newEmailLink);
         }
         
         if (ctaEmailLink) {
             (ctaEmailLink as HTMLAnchorElement).href = `mailto:${address}@${domain}`;
+            const newCtaEmailLink = ctaEmailLink.cloneNode(true);
+            ctaEmailLink.replaceWith(newCtaEmailLink);
         }
         
         const phoneElement = document.getElementById("phone");
         const phoneLink = document.getElementById("phone-link");
         const ctaPhoneLink = document.getElementById("cta-phone-link");
         const extension = "+1";
-        const phoneNumber = "(702) 555-0123";
+        const phoneNumber = "(786) 273-2135";
         
         if (phoneElement) {
             phoneElement.textContent = `${extension} ${phoneNumber}`;
@@ -178,10 +187,14 @@ const { language } = Astro.props;
         
         if (phoneLink) {
             (phoneLink as HTMLAnchorElement).href = `tel:${extension.replace(/\s/g, '')}${phoneNumber.replace(/\D/g, '')}`;
+            const newPhoneLink = phoneLink.cloneNode(true);
+            phoneLink.replaceWith(newPhoneLink);
         }
         
         if (ctaPhoneLink) {
             (ctaPhoneLink as HTMLAnchorElement).href = `tel:${extension.replace(/\s/g, '')}${phoneNumber.replace(/\D/g, '')}`;
+            const newCtaPhoneLink = ctaPhoneLink.cloneNode(true);
+            ctaPhoneLink.replaceWith(newCtaPhoneLink);
         }
         
             // Update business status

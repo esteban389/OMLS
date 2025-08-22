@@ -151,8 +151,8 @@ const { language } = Astro.props;
             <div class="footer-section">
                 <h4>{_(language, "footer.sections.contact_info.title")}</h4>
                 <ul>
-                    <li>hello@olympicmoris.com</li>
-                    <li>+1 (702) 555-0123</li>
+                    <li id="footer-email">hello@olympicmoris.com</li>
+                    <li id="footer-phone-number">+1 (702) 555-0123</li>
                     <li>
                         {_(language, "contact.hours.weekdays")}: {
                             _(language, "contact.hours.weekdays_time")
@@ -365,3 +365,20 @@ const { language } = Astro.props;
         }
     }
 </style>
+
+<script>
+    const footerEmail = document.getElementById("footer-email");
+    const footerPhoneNumber = document.getElementById("footer-phone-number");
+
+    if (footerEmail) {
+        const address = "legalservice";
+        const domain = "olympicmortis.net";
+        footerEmail.textContent = `${address}@${domain}`;
+    }
+
+    if (footerPhoneNumber) {
+        const extension = "+1";
+        const phoneNumber = "(786) 273-2135";
+        footerPhoneNumber.textContent = `${extension} ${phoneNumber}`;
+    }
+</script>

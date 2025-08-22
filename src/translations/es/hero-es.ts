@@ -1,7 +1,7 @@
 import type { HeroTranslations } from "../translation";
 
 const heroEs: HeroTranslations = {
-    'badge': 'Confiado por más de 1000 clientes en todo el país',
+    'badge': 'Los expertos en impuestos y contabilidad en que puedes confiar',
     'title': {
         'line1': 'Hacemos que los asuntos legales y fiscales',
         'line2': 'sean fáciles y sin estrés'
